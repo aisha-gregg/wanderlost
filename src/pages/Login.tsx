@@ -16,8 +16,15 @@ export function Login() {
   return (
     <View style={styles.container}>
       <Logo></Logo>
-      <Text style={{ height: 200 }}>WanderLost</Text>
-      <Text style={{ height: 200 }}>Discover Wonders</Text>
+      <Text
+        style={{
+          marginBottom: 10,
+          fontSize: 40,
+        }}
+      >
+        WanderLost
+      </Text>
+      <Text style={{ marginBottom: 60 }}>Discover Wonders</Text>
       <Button title="Sign in with Google" type="outline" />
     </View>
   );
