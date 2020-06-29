@@ -1,8 +1,21 @@
 import React, { useState } from "react";
+import "react-native-gesture-handler";
 import { StyleSheet, Text, View, TextInput } from "react-native";
-import logo from "./assets/wanderlostlogo.svg";
+import { createStackNavigator } from "@react-navigation/stack";
 
-export default function App() {
+import logo from "./assets/wanderlostlogo.svg";
+import { NavigationContainer } from "@react-navigation/native";
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+
+function Login() {
   const [text, setText] = useState("");
   return (
     <View style={styles.container}>
@@ -13,16 +26,20 @@ export default function App() {
         defaultValue={text}
       ></TextInput>
 
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>WanderLost</Text>
+      <Text>Discover Wonders</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const Stack = createStackNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
