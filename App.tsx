@@ -3,7 +3,9 @@ import "react-native-gesture-handler";
 import { Login } from "./src/pages/Login";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { Home } from "./src/pages/components/Home";
+import { Home } from "./src/pages/Home";
+import { RootStackParamList } from "./src/routes";
+import { Country } from "./src/pages/Country";
 
 const theme = {
   ...DefaultTheme,
@@ -13,7 +15,7 @@ const theme = {
   },
 };
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
   return (
@@ -21,6 +23,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Country" component={Country} />
       </Stack.Navigator>
     </NavigationContainer>
   );

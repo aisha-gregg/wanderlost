@@ -10,5 +10,9 @@ const styles = StyleSheet.create({
   },
 });
 export function Home() {
-  return <View style={styles.container}></View>;
+  return (
+    <View style={styles.container}>
+      {/* TODO: Iterate over countries and navigate passing props to the route */}
+    </View>
+  );
 }

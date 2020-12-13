@@ -2,7 +2,6 @@ import React from "react";
 import "react-native-gesture-handler";
 import { Button } from "react-native-elements";
 import { StyleSheet, Text, View } from "react-native";
-import Logo from "./logo.svg";
 import { StackNavigationHelpers } from "@react-navigation/stack/lib/typescript/src/types";
 
 const styles = StyleSheet.create({
@@ -17,7 +16,7 @@ const styles = StyleSheet.create({
 export function Login({ navigation }: { navigation: StackNavigationHelpers }) {
   return (
     <View style={styles.container}>
-      <Logo></Logo>
+    
       <Text
         style={{
           marginBottom: 10,
